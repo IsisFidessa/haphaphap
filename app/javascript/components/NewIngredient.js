@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 
 function handleFormSubmit(name) {
   let body = JSON.stringify({
-    dish: { name: name }
+    ingredient: { name: name }
   });
 
-  fetch("http://localhost:3000/api/v1/dishes", {
+  fetch("http://localhost:3000/api/v1/ingredients", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -19,7 +19,7 @@ function handleFormSubmit(name) {
     
 }
 
-const NewDish = props => {
+const NewIngredient = props => {
   let formFields = {};
 
   return (
@@ -39,4 +39,4 @@ const NewDish = props => {
   );
 };
 
-export default NewDish
+export default NewIngredient
